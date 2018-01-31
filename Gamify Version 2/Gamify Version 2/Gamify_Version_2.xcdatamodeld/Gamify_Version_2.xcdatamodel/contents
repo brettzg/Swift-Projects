@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16A320" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Games" representedClassName="Games" syncable="YES" codeGenerationType="class">
+        <attribute name="gameDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gameName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="levelOne" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="LevelsOne" inverseName="gameOne" inverseEntity="LevelsOne" syncable="YES"/>
+        <relationship name="levelThree" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="LevelsThree" inverseName="gameThree" inverseEntity="LevelsThree" syncable="YES"/>
+        <relationship name="levelTwo" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="LevelsTwo" inverseName="gameTwo" inverseEntity="LevelsTwo" syncable="YES"/>
+    </entity>
+    <entity name="LevelsOne" representedClassName="LevelsOne" syncable="YES" codeGenerationType="class">
+        <attribute name="achieved" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="achievement" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="achievementIcon" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="goal" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="goalNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="punishment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="reward" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="gameOne" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Games" inverseName="levelOne" inverseEntity="Games" syncable="YES"/>
+    </entity>
+    <entity name="LevelsThree" representedClassName="LevelsThree" syncable="YES" codeGenerationType="class">
+        <attribute name="achieved" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="achievement" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="achievementIcon" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="goal" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="goalNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="punishment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="reward" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="gameThree" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Games" inverseName="levelThree" inverseEntity="Games" syncable="YES"/>
+    </entity>
+    <entity name="LevelsTwo" representedClassName="LevelsTwo" syncable="YES" codeGenerationType="class">
+        <attribute name="achieved" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="achievement" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="achievementIcon" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="goal" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="goalNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="punishment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="reward" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="gameTwo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Games" inverseName="levelTwo" inverseEntity="Games" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Games" positionX="-234" positionY="-9" width="128" height="118"/>
+        <element name="LevelsOne" positionX="-20" positionY="36" width="128" height="163"/>
+        <element name="LevelsTwo" positionX="-56" positionY="306" width="128" height="163"/>
+        <element name="LevelsThree" positionX="-396" positionY="249" width="128" height="163"/>
+    </elements>
+</model>
